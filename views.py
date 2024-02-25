@@ -6,7 +6,7 @@ def default_view(request):
 def calculate_total(request, price):
     try:
         price = float(price)
-        tax_rate = 0.15  # Set the tax rate to 15% (0.15)
+        tax_rate = 0.15 
         total = price + (price * tax_rate)
         context = {
             'price': price,
@@ -18,7 +18,7 @@ def calculate_total(request, price):
         return render(request, 'tax/invalid_price.html')
 
 def tax_rate_view(request):
-    tax_rate = 0.15  # Set the tax rate to 15% (0.15)
+    tax_rate = 0.15  
     context = {
         'tax_rate': tax_rate,
     }
